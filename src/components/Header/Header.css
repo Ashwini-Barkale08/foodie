@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.header {
+  height: 34vw;
+  margin: 30px auto;
+  background: url("/header_image.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 10px 10px rgba(255, 0, 0, 0.68);
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vw;
+  min-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 700;
+  text-shadow: 2px 2px whitesmoke;
+  font-family: "Caveat", cursive;
+  text-transform: capitalize;
+  color: white;
+
+  /* Prefix required. Even Firefox only supports the -webkit- prefix */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: red;
+  font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+  color: whitesmoke;
+  font-size: 1vw;
+}
+
+.header-contents button {
+  cursor: pointer;
+  border: none;
+  color: red;
+  font-weight: 500;
+  background-color: white;
+  font-size: max(1vw, 13px);
+  border-radius: 50px;
+  padding: 1vw 2.3vw;
+}
+
+/* Media Queries */
+@media (max-width: 1050px) {
+  .header {
+    height: 40vw;
+    background-size: cover;
+  }
+
+  .header-contents {
+    max-width: 45%;
+    left: 5vw;
+    bottom: 12%;
+  }
+
+  .header-contents h2 {
+    font-size: max(5vw, 20px);
+  }
+
+  .header-contents p {
+    font-size: 1.2vw;
+  }
+
+  .header-contents button {
+    font-size: max(1.2vw, 12px);
+    padding: 1.2vw 2.5vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .header {
+    height: 50vw;
+    background-size: cover;
+  }
+
+  .header-contents {
+    max-width: 65%;
+    left: 4vw;
+    bottom: 15%;
+  }
+
+  .header-contents h2 {
+    font-size: max(6vw, 18px);
+  }
+
+  .header-contents p {
+    display: none;
+  }
+
+  .header-contents button {
+    font-size: max(1.5vw, 11px);
+    padding: 2vw 4vw; /* Corrected to space-separated values */
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: 60vw;
+    background-size: cover;
+  }
+
+  .header-contents {
+    max-width: 80%;
+    left: 3vw;
+    bottom: 20%;
+  }
+
+  .header-contents h2 {
+    font-size: max(8vw, 16px);
+  }
+
+  .header-contents button {
+    font-size: max(2vw, 10px);
+    padding: 2.5vw 5vw;
+  }
+}
+
